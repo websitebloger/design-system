@@ -7,7 +7,15 @@ global:
   - box-shadow
 imports:
 - "../../../../design-tokens/force-base/aliases/color.yml"
+- "../../../../design-tokens/salesforce-skin/aliases/color.yml"
+- "../../../../design-tokens/color-palettes.yml"
 props:
+  BUTTON_COLOR_BACKGROUND_PRIMARY:
+    value: "{!WHITE_PRIMARY}"
+  BUTTON_COLOR_BACKGROUND_BRAND_PRIMARY:
+    value: "{!BLUE_BACKGROUND_PRIMARY}"
+  BUTTON_COLOR_BACKGROUND_SECONDARY:
+    value: "{!WHITE_TRANSPARENT_80}"
   COLOR_BACKGROUND_BUTTON_BRAND:
     value: "{!SCIENCE_BLUE}"
     comment: Brandable primary button
@@ -21,7 +29,7 @@ props:
     value: "{!STEAM}"
     comment: Brandable primary button - disabled state
   COLOR_BACKGROUND_BUTTON_DEFAULT:
-    value: "{!WHITE}"
+    value: "{!WHITE_PRIMARY}"
     comment: Default secondary button
   COLOR_BACKGROUND_BUTTON_DEFAULT_HOVER:
     value: "{!LINK_WATER}"
@@ -33,7 +41,7 @@ props:
     value: "{!WHITE_LILAC}"
     comment: Default secondary button - active state
   COLOR_BACKGROUND_BUTTON_DEFAULT_DISABLED:
-    value: "{!WHITE}"
+    value: "{!WHITE_PRIMARY}"
     comment: Default secondary button - disabled state
   COLOR_BACKGROUND_BUTTON_ICON:
     value: "{!TRANSPARENT}"
@@ -48,7 +56,7 @@ props:
     value: "{!WHITE_LILAC}"
     comment: Background color for icon-only button - active state
   COLOR_BACKGROUND_BUTTON_ICON_DISABLED:
-    value: "{!WHITE}"
+    value: "{!WHITE_PRIMARY}"
     comment: Background color for icon-only button - disabled state
   COLOR_BACKGROUND_BUTTON_INVERSE:
     value: "{!TRANSPARENT}"

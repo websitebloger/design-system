@@ -16,28 +16,22 @@
 * @variant
 */
 .slds-card {
+  position: relative;
   padding: 0;
   background: $card-color-background;
-  border: $border-width-thin solid $color-border;
+  border: $border-width-thin solid $card-color-border;
   border-radius: $border-radius-medium;
   background-clip: padding-box;
+  box-shadow: $card-shadow;
 
   // Adds spacing between cards
   + .slds-card {
-    margin-top: $spacing-medium;
+    margin-top: $card-spacing-margin;
   }
 
-  &__header,
-  &__footer,
   &__body_inner,
   &__body--inner {
-    padding-left: $spacing-small;
-    padding-right: $spacing-small;
-
-    @include mq-large-min {
-      padding-left: $card-spacing-large;
-      padding-right: $card-spacing-large;
-    }
+    padding: $card-body-padding;
   }
 
   /**
@@ -47,12 +41,13 @@
    * @restrict .slds-card div
    */
   &__header {
-    padding-top: $spacing-small;
-    margin-bottom: $spacing-small;
+    padding: $card-header-padding;
+    margin: $card-header-margin;
   }
 
   &__header-link {
     color: inherit;
+    font-weight: $card-font-weight;
   }
 
   /**
@@ -77,31 +72,11 @@
    * @restrict .slds-card footer
    */
   &__footer {
-    margin-top: $spacing-small;
-    padding-bottom: $spacing-small;
-    text-align: right;
-  }
-
-  &_narrow,
-  &--narrow {
-
-    .slds-card__header {
-      padding-top: $spacing-small;
-      margin-bottom: $spacing-small;
-
-      @include mq-large-min {
-        padding-top: $card-spacing-large;
-        margin-bottom: $card-spacing-large;
-      }
-    }
-
-    .slds-card__footer {
-      padding-bottom: $spacing-small;
-
-      @include mq-large-min {
-        padding-bottom: $card-spacing-medium;
-      }
-    }
+    padding: $card-footer-padding;
+    margin-top: $card-footer-margin;
+    text-align: $card-footer-text-align;
+    font-size: $font-size-text-small;
+    border-top: $border-width-thin solid $card-footer-color-border;
   }
 
   @include deprecate('4.0.0', 'Use a text-align--center utility class instead') {
@@ -122,3 +97,5 @@
 .slds-card__tile {
   margin-top: $spacing-x-small;
 }
+
+@import 'blame';

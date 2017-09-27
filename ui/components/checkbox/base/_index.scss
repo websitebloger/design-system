@@ -111,7 +111,6 @@
     }
 
     &[disabled] {
-      // scss-lint:disable NestingDepth
 
       + .slds-checkbox_faux,
       + .slds-checkbox--faux,
@@ -122,7 +121,6 @@
         background-color: $color-background-input-disabled;
         border-color: $color-border-input-disabled;
 
-
         &:after {
           border-color: $color-background-input;
         }
@@ -131,13 +129,6 @@
   }
 }
 
-/**
- * Error styles for checkbox or checkbox group
- *
- * @selector .slds-has-error
- * @restrict .slds-form-element
- * @modifier
- */
 .slds-has-error .slds-checkbox [type="checkbox"] {
 
   + .slds-checkbox_faux,

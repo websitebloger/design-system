@@ -18,7 +18,7 @@
  *
  * @name stateful
  * @selector .slds-button_stateful
- * @restrict .slds-button
+ * @restrict button, a, span
  * @variant
  */
 
@@ -29,7 +29,7 @@
 
   &:hover:not([disabled]),
   &:focus:not([disabled]) {
-    border: $border-width-thin solid $color-border-button-default;
+    border-color: $button-color-border-primary;
     background-color: $color-background-button-default-hover;
   }
 

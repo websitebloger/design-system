@@ -25,3 +25,32 @@ export let states = [
     element: <Button disabled>Button</Button>
   }
 ];
+
+export let examples = [
+  {
+    id: 'with-icon-left',
+    label: 'With left icon',
+    element:
+      <Button className="slds-button_neutral">
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_left"
+          sprite="utility"
+          symbol="download"
+        />
+        Button Neutral
+      </Button>
+  },
+  {
+    id: 'with-icon-right',
+    label: 'With right icon',
+    element:
+      <Button className="slds-button_neutral">
+        Button Neutral
+        <SvgIcon
+          className="slds-button__icon slds-button__icon_right"
+          sprite="utility"
+          symbol="download"
+        />
+      </Button>
+  }
+];
